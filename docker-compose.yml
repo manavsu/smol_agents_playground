@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  smol-agent:
+    container_name: smol-agent
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config.toml:/app/config.toml:ro
+    restart: unless-stopped
+    command: ["uv", "run", "--script", "main.py"]
