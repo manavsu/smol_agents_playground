@@ -12,7 +12,7 @@ from fastmcp import FastMCP
 from smolagents import CodeAgent, LiteLLMModel, WebSearchTool
 import tomllib
 
-with open("config.toml", "rb") as f:
+with open("/home/manav/Documents/smol_agents_playground/config.toml", "rb") as f:
     config = tomllib.load(f)
 
 
