@@ -44,4 +44,4 @@ def run_smol_agent(prompt: str, allowed_python_imports: list[str]) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    mcp.run(transport="streamable-http")
